@@ -35,12 +35,7 @@ def activites():
         apknamelist = os.listdir(data)
         apknamepath = data + "/"
     for ApkName in apknamelist:
-        fieldnames = []
-        with open('/root/Desktop/data.csv') as csv_file:
-            CSVREADER = csv.DictReader(csv_file)
-            fieldnames = CSVREADER.fieldnames
-        csv_master_dict = dict.fromkeys(fieldnames, 0)
-        csv_master_dict['NAME'] = ApkName
+        
         TargetApk = apknamepath + ApkName
         a, d, dx = AnalyzeAPK(TargetApk)
         k = a.get_activities()
@@ -73,12 +68,7 @@ def permission():
         apknamelist = os.listdir(data)
         apknamepath = data + "/"
     for ApkName in apknamelist:
-        fieldnames = []
-        with open('/root/Desktop/data.csv') as csv_file:
-            CSVREADER = csv.DictReader(csv_file)
-            fieldnames = CSVREADER.fieldnames
-        csv_master_dict = dict.fromkeys(fieldnames, 0)
-        csv_master_dict['NAME'] = ApkName
+        
         TargetApk = apknamepath + ApkName
         a, d, dx = AnalyzeAPK(TargetApk)
         m = a.get_permissions()
@@ -157,12 +147,7 @@ def get_activities():
         apknamelist = os.listdir(data)
         apknamepath = data + "/"
     for ApkName in apknamelist:
-        fieldnames = []
-        with open('/root/Desktop/data.csv') as csv_file:
-            CSVREADER = csv.DictReader(csv_file)
-            fieldnames = CSVREADER.fieldnames
-        csv_master_dict = dict.fromkeys(fieldnames, 0)
-        csv_master_dict['NAME'] = ApkName
+        
         TargetApk = apknamepath + ApkName
         a, d, dx = AnalyzeAPK(TargetApk)
         df = pd.read_csv("/root/Desktop/data.csv")
@@ -187,11 +172,7 @@ def get_permissions():
         apknamelist = os.listdir(data)
         apknamepath = data + "/"
         for ApkName in apknamelist:
-            fieldnames = []
-            with open('/root/Desktop/data.csv') as csv_file:
-                CSVREADER = csv.DictReader(csv_file)
-                fieldnames = CSVREADER.fieldnames
-            csv_master_dict = dict.fromkeys(fieldnames, 0)
+            
             df = pd.read_csv("/root/Desktop/data.csv")
             csv_master_dict['NAME'] = ApkName
             TargetApk = apknamepath + ApkName
