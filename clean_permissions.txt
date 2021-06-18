@@ -14,6 +14,8 @@ air.com.indiegoes.archangelmichael..AppEntry
 com.milkmangames.extensions.android.PurchaseWrapActivity
 a.envisionmobile.caa.more.MyTrips
 Sha256
+get_features
+get_receivers
 a.envisionmobile.caa.OauthLogin
 a.envisionmobile.caa.insurance.InsuranceReviewClaim
 a.envisionmobile.caa.settings.SettingLanguage
