@@ -118,6 +118,8 @@ def Extract():
         n = a.get_min_sdk_version()
         o = a.get_max_sdk_version()
         p = a.get_target_sdk_version()
+        receiver = len(a.get_receivers())
+        features = len(a.get_features())
         hasher = hashlib.md5()
         l = hashlib.sha512()
         with open(TargetApk, 'rb') as f:
@@ -135,6 +137,8 @@ def Extract():
                 "target_sdk_version": p,
                 "md5": md5,
                 "Sha256": sha256,
+                "get_receivers": receiver,
+                "get_features": features,
             })
 
 
