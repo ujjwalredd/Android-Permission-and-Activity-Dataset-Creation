@@ -178,7 +178,6 @@ def get_permissions():
         for ApkName in apknamelist:
             
             df = pd.read_csv("/root/Desktop/data.csv")
-            csv_master_dict['NAME'] = ApkName
             TargetApk = apknamepath + ApkName
             a, d, dx = AnalyzeAPK(TargetApk)
             df = pd.read_csv("/root/Desktop/data.csv")
