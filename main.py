@@ -23,7 +23,7 @@ def csv_format():
     csv_row_data = ['NAME']
     csv_row_data += permlist
 
-    with open('/root/Desktop/data.csv', 'w') as csv_file:
+    with open('./data.csv', 'w') as csv_file: 
         writer = csv.writer(csv_file)
         writer.writerow(csv_row_data)
 
@@ -105,14 +105,14 @@ def Extract():
         apknamepath = data + "/"
     for ApkName in apknamelist:
         fieldnames = []
-        with open('/root/Desktop/data.csv') as csv_file:
+        with open('./data.csv') as csv_file:
             CSVREADER = csv.DictReader(csv_file)
             fieldnames = CSVREADER.fieldnames
         csv_master_dict = dict.fromkeys(fieldnames, 0)
         csv_master_dict['NAME'] = ApkName
         TargetApk = apknamepath + ApkName
         a, d, dx = AnalyzeAPK(TargetApk)
-        df = pd.read_csv("/root/Desktop/data.csv")
+        df = pd.read_csv("./data.csv")
         df.replace(np.nan,0)
         m = a.get_androidversion_code()
         n = a.get_min_sdk_version()
@@ -127,7 +127,7 @@ def Extract():
             hasher.update(co)
         md5 = hasher.hexdigest()
         sha256 = l.hexdigest()
-        with open('/root/Desktop/data.csv', 'a') as csv_dump:
+        with open('./data.csv', 'a') as csv_dump:
             CSVwriter = csv.DictWriter(csv_dump, fieldnames=fieldnames)
             CSVwriter.writerow({
                 "androidversion_code": m,
@@ -154,7 +154,7 @@ def get_activities():
         
         TargetApk = apknamepath + ApkName
         a, d, dx = AnalyzeAPK(TargetApk)
-        df = pd.read_csv("/root/Desktop/data.csv")
+        df = pd.read_csv("./data.csv")
         mm = df[df['NAME'] == ApkName].index.values
         print(mm)
         v = a.get_activities()
@@ -177,10 +177,10 @@ def get_permissions():
         apknamepath = data + "/"
         for ApkName in apknamelist:
             
-            df = pd.read_csv("/root/Desktop/data.csv")
+            df = pd.read_csv("./data.csv")
             TargetApk = apknamepath + ApkName
             a, d, dx = AnalyzeAPK(TargetApk)
-            df = pd.read_csv("/root/Desktop/data.csv")
+            df = pd.read_csv("./data.csv")
             i = df[df['NAME'] == ApkName].index.values
             print(i)
             u = a.get_permissions()
