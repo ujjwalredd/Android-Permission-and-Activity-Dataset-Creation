@@ -34,7 +34,7 @@ air.com.adobe.connectpro.apk | 1 | 1 | 1 | 0
 Each row represents an Android app and contains the following information:
 * Name: The name of the app
 * Next Columns having all the Permission and Activites of the APK.
-* All the rows corresponding to the APK name t will be having valoe 0 or 1 respesenting the present or not. 
+* All the rows corresponding to the APK name will be having value 0 or 1 respesenting the present or not. 
 
 # License
 
