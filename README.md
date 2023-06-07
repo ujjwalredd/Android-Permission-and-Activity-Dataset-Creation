@@ -38,7 +38,7 @@ Each row represents an Android app and contains the following information:
 
 # License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
 Feel free to modify and extend this code to suit your specific needs.
 
