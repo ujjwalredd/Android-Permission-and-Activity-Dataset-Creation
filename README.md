@@ -19,10 +19,10 @@ This code's objective is to automatically extract permissions and activities fro
 
 # Usage
 * Clone this repository to your local machine.
-* Install the required Python dependencies by running pip install -r requirements.txt.
-* Download the APK files that you want to extract permissions and activities from and place them in the "Bengin_2017" directory.
-* Run the main script "main.py" to perform the extraction and dataset creation process.
-* The extracted data will be saved as "data.csv" file.
+* Install the required Python dependencies by running `pip install -r requirements.txt`.
+* Download the APK files that you want to extract permissions and activities from and place them in the `Bengin_2017` directory.
+* Run the main script `main.py` to perform the extraction and dataset creation process.
+* The extracted data will be saved as `data.csv` file.
 
 # Dataset Format
 The created dataset will have the following structure:
